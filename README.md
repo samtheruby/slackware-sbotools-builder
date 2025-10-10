@@ -1,6 +1,6 @@
 # Slackware SBO Builder
 
-Docker image for building Slackware packages from SlackBuilds.org (SBO) repository Based on Slackware 15.0.
+Docker image for building Slackware packages using sbotools from SlackBuilds.org (SBO) repository based on Slackware 15.0.
 
 ## Usage
 
