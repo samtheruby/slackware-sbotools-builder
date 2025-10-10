@@ -1,0 +1,22 @@
+# Built packages directory
+packages/
+
+# Docker build cache
+.docker/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.log
+.env
+.env.local
