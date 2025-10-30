@@ -7,7 +7,7 @@ RUN echo "https://mirrors.ocf.berkeley.edu/slackware/slackware64-15.0/" > /etc/s
 RUN echo y | slackpkg update
 RUN update-ca-certificates --fresh
 # Install sbotools from tarball
-RUN cd /tmp && wget https://slackware.halpanet.org/slackdce/packages/15.0/x86_64/system/sbotools/sbotools-3.8.1-noarch-1_slackdce.txz && upgradepkg --install-new *.txz && rm -rf /tmp/*
+RUN cd /tmp && wget https://slackware.halpanet.org/slackdce/packages/15.0/x86_64/system/sbotools/sbotools-4.0-noarch-1_slackdce.txz && upgradepkg --install-new *.txz && rm -rf /tmp/*
 # Configure sbotools (use 75% of cores, minimum 1)
 RUN mkdir -p /etc/sbotools && \
     echo "PKG_DIR=/packages" >> /etc/sbotools/sbotools.conf && \
