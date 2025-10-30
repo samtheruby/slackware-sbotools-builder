@@ -13,19 +13,19 @@ The container automatically:
 
 Pull the image:
 ```bash
-docker pull ghcr.io/YOUR_USERNAME/YOUR_REPO_NAME:latest
+docker pull ghcr.io/samtheruby/slackware-sbotools-builder:latest
 ```
 
 Build a package:
 ```bash
 docker run --rm -v $(pwd)/packages:/packages \
-  ghcr.io/YOUR_USERNAME/YOUR_REPO_NAME:latest package-name
+  ghcr.io/samtheruby/slackware-sbotools-builder:latest package-name
 ```
 
 Build multiple packages:
 ```bash
 docker run --rm -v $(pwd)/packages:/packages \
-  ghcr.io/YOUR_USERNAME/YOUR_REPO_NAME:latest package1 package2 package3
+  ghcr.io/samtheruby/slackware-sbotools-builder:latest package1 package2 package3
 ```
 
 ### Examples
@@ -33,14 +33,14 @@ docker run --rm -v $(pwd)/packages:/packages \
 Build nginx:
 ```bash
 docker run --rm -v $(pwd)/packages:/packages \
-  ghcr.io/YOUR_USERNAME/YOUR_REPO_NAME:latest nginx
+  ghcr.io/samtheruby/slackware-sbotools-builder:latest nginx
 ```
 
 Build with custom job count:
 ```bash
 docker run --rm -v $(pwd)/packages:/packages \
   -e JOBS=4 \
-  ghcr.io/YOUR_USERNAME/YOUR_REPO_NAME:latest nginx
+  ghcr.io/samtheruby/slackware-sbotools-builder:latest nginx
 ```
 
 ## Environment Variables
