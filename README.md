@@ -18,13 +18,13 @@ docker pull ghcr.io/samtheruby/slackware-sbotools-builder:latest
 
 Build a package:
 ```bash
-docker run --rm -v $(pwd)/packages:/packages \
+docker run --rm -it -v $(pwd)/packages:/packages \
   ghcr.io/samtheruby/slackware-sbotools-builder:latest package-name
 ```
 
 Build multiple packages:
 ```bash
-docker run --rm -v $(pwd)/packages:/packages \
+docker run --rm -it -v $(pwd)/packages:/packages \
   ghcr.io/samtheruby/slackware-sbotools-builder:latest package1 package2 package3
 ```
 
@@ -32,13 +32,13 @@ docker run --rm -v $(pwd)/packages:/packages \
 
 Build nginx:
 ```bash
-docker run --rm -v $(pwd)/packages:/packages \
+docker run --rm -it -v $(pwd)/packages:/packages \
   ghcr.io/samtheruby/slackware-sbotools-builder:latest nginx
 ```
 
 Build with custom job count:
 ```bash
-docker run --rm -v $(pwd)/packages:/packages \
+docker run --rm -it -v $(pwd)/packages:/packages \
   -e JOBS=4 \
   ghcr.io/samtheruby/slackware-sbotools-builder:latest nginx
 ```
